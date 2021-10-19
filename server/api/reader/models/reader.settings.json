@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "readers",
+  "info": {
+    "name": "reader",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "googleId": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "comments": {
+      "via": "user",
+      "collection": "comment"
+    },
+    "image": {
+      "type": "string"
+    }
+  }
+}

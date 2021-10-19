@@ -1,0 +1,190 @@
+.container {
+    .article-head {
+        display : flex;
+        margin-top: 9rem;
+    
+        .main {
+            border: 1px solid red;
+            // min-width: 500px;
+            h1 {
+                font-size: 3rem;
+                // weight: 700;
+                line-height: 3.33rem;
+            }
+    
+            p {
+                font-size: 0.87rem;
+                line-height: 1.4rem;
+                text-align: justify;
+            }
+        }
+        .articles {
+            min-width: 493px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .btn {
+                margin-top: 30px;
+            }
+    
+            .articles_section{
+                margin-left: 3.5rem;
+    
+                 .articles_content {
+                    display: flex;
+                    margin-bottom: 1.8rem;
+    
+                    .articles_img {
+                        border: 1px solid #000;
+                        border-radius: 15px;
+                        width: 220px;
+                        height: 185x;
+                    }
+                    .article-text {
+                        margin-left: 0.75rem;
+                        width: 240px;
+    
+                        .heading-text {
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                            line-height: 1.7rem;
+                        }
+    
+                        p {
+                            font-size: 0.86rem;
+                            line-height: 1.3rem;
+                            // text-align: justify;
+                        }
+                    }
+                 }   
+            }
+    
+           
+        }
+        
+    }
+    .latest {
+        margin-top: 100px;
+       
+        .latest-post-container {
+            display: flex;
+
+            .latest-post-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .btn {
+                    margin-top: 30px;
+                }
+
+                .latest-post-section {
+                    display: flex;
+                }
+            }
+            .advertisement {
+                height: 500px;
+                width: 350px;
+                background-color: #000;
+                margin-top: 20px;
+            }
+        }
+        
+    }
+    .entertainment {
+        margin-top: 100px;
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+
+        .entertainment-left-section {
+            border: 1px solid rgb(94, 12, 12);
+            width: 45%;
+        }
+
+        .entertainment-right-section {
+            border: 1px solid blue;
+            width: 45%;
+        }
+    }
+    .culture-tourism {
+        margin-top: 100px;
+
+        .culture-tourism-bottom-section {
+            display: flex;
+            margin-top: 50px;
+
+            .culture-tourism-content {
+                display: flex;
+            }
+
+            .advertisement {
+                height: 500px;
+                width: 350px;
+                background-color: #000; 
+                margin-top: 20px;
+            }
+        }
+    }
+    .education {
+        margin-top: 100px;
+
+        .education-content {
+            display: flex;
+            background-color: #000;
+            padding: 0 55px;
+
+
+            .education-right-content {
+                background-color: #000;
+                color: #fff;
+                width: 500px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .interview {
+                    border-bottom: 2px solid yellow;
+                    width: 150px;
+                    margin: 0 auto;
+
+                }
+            
+            }
+        }
+    }
+    .posts_container {
+        margin-top: 100px;
+
+        .posts_grid {
+            display: flex;
+            justify-content: space-between;
+        
+            .writer_box {
+                border-top: 2px solid yellow;
+                width: 9rem;
+                padding-top: 5px;
+            }
+        }
+    }
+    .advertisement_section {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+       .advertisement-content {
+           width: 62.5rem;
+           margin-bottom: 100px;
+       } 
+       
+       .btn {
+            padding: 5px;
+            max-width: 15.6rem;
+
+        }
+    }   
+}
+

@@ -1,0 +1,59 @@
+{
+    "name": "Arise Igala",
+    "short_name": "Arise Igala",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "shortcuts": [
+        {
+            "name": "Arise Articles",
+            "short_name": "Articles",
+            "description": "ARISE IGALA daily article",
+            "url": "/",
+            "icons": [
+                {
+                    "src": "/images/today.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Arise Igala Magazine",
+            "short_name": "Magazine",
+            "description": "ARISE IGALA Magazine is a Socio-Cultural and Lifestyle Publication Designed to Celebrate, Inspire and Challenge the People into Positive Ventures for the Benefit of Mankind. It is published by ARISE IGALA PUBLISHING LIMITED (RC 1822199), a subsidiary of ONOJA DREAMS NETWORK LIMITED (RC 868974)",
+            "url": "/magazine",
+            "icons": [
+                {
+                    "src": "/images/tomorrow.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ],
+    "description": "Weather forecast information",
+    "screenshots": [
+        {
+            "src": "/images/screenshot1.png",
+            "type": "image/png",
+            "sizes": "540x720"
+        },
+        {
+            "src": "/images/screenshot2.jpg",
+            "type": "image/jpg",
+            "sizes": "540x720"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+.first-wrapper {
+  .first-main {
+    gap: 3rem;
+    .left {
+      flex: 1;
+    }
+    .right {
+      flex: 1;
+      div {
+        width: 100% !important;
+        min-height: inherit !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent;
+        line-height: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        img {
+          width: 100%;
+          transform-style: preserve-3d;
+        }
+      }
+    }
+  }
+}
+
+.ads {
+  &_ {
+    height: 579px;
+    overflow: hidden;
+    i {
+      right: 1rem;
+      top: 1rem;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+}

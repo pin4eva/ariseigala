@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "magazines",
+  "info": {
+    "name": "Magazine",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "pdf": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "issue": {
+      "type": "integer"
+    },
+    "edition": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

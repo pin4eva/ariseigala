@@ -1,0 +1,10 @@
+{
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "jsxBracketSameLine": true,
+  "jsxSingleQuote": false,
+  "semi": true,
+  "useTabs": false,
+  "printWidth": 240
+}

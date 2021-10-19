@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/new-cover",
+      "handler": "new-cover.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/new-cover",
+      "handler": "new-cover.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/new-cover",
+      "handler": "new-cover.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

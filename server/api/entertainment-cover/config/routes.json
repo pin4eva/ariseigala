@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/entertainment-cover",
+      "handler": "entertainment-cover.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/entertainment-cover",
+      "handler": "entertainment-cover.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/entertainment-cover",
+      "handler": "entertainment-cover.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

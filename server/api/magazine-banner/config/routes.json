@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/magazine-banner",
+      "handler": "magazine-banner.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/magazine-banner",
+      "handler": "magazine-banner.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/magazine-banner",
+      "handler": "magazine-banner.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

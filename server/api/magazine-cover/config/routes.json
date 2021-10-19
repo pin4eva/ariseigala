@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/magazine-cover",
+      "handler": "magazine-cover.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/magazine-cover",
+      "handler": "magazine-cover.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/magazine-cover",
+      "handler": "magazine-cover.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+.tv-header {
+  &-main {
+    .tv-header-nav {
+      &-items {
+        ul {
+          padding: 0;
+          list-style: none;
+        }
+      }
+    }
+  }
+  .min-item {
+    ul {
+      list-style: none;
+      li {
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+}

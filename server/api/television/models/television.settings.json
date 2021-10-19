@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "televisions",
+  "info": {
+    "name": "television",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "television"
+    }
+  }
+}

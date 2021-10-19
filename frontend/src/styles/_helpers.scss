@@ -1,0 +1,100 @@
+.georgia {
+	font-family: Georgia;
+	// font-family: "Bergamo Std";
+}
+
+.serif {
+	font-family: serif;
+}
+
+.poppins {
+	font-family: "Poppins", sans-serif;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+.fw-400 {
+	font-weight: 400;
+}
+.big-head {
+	font-weight: 700;
+	font-size: 3rem;
+	font-family: serif;
+	line-height: 40px;
+	box-sizing: border-box;
+	// margin-bottom: 1rem;
+}
+
+.c-pointer {
+	cursor: pointer;
+}
+
+.line-height-1 {
+	line-height: 18px;
+}
+
+.small-head {
+	font-weight: 700;
+	font-size: 1.5rem;
+	font-family: serif;
+	line-height: 27px;
+	box-sizing: border-box;
+}
+.text-inherit {
+	color: inherit;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.font-14 {
+	font-size: 0.875rem;
+	line-height: 21px;
+}
+.font-18 {
+	font-size: 1.25rem;
+	line-height: 21px;
+}
+.font-24 {
+	font-size: 1.5rem;
+	line-height: 21px;
+}
+.mc {
+	width: 90%;
+	max-width: 1000px;
+}
+.line {
+	height: 4px;
+}
+.line-thin {
+	height: 1px;
+}
+
+.advert {
+	background-color: #c4c4c4;
+	width: 100%;
+	height: auto;
+	&.landscape {
+		width: 100%;
+		max-height: 16rem;
+	}
+	&.straight {
+		min-width: 17rem;
+		height: 100%;
+	}
+}
+
+.gap-1 {
+	gap: 1rem;
+}
+.gap-2 {
+	gap: 2rem;
+}
+
+.avatar {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 100%;
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "magazine_covers",
+  "info": {
+    "name": "magazine-cover",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "string"
+    },
+    "issue": {
+      "type": "integer"
+    }
+  }
+}

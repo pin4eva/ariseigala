@@ -1,0 +1,97 @@
+.artilce-main {
+  .first-article {
+    &-main {
+      &-body {
+        gap: 1.5rem;
+        .one {
+          flex: 0.2;
+          &-row {
+            .one-col {
+              .one-card {
+                &-img {
+                  position: relative;
+                  overflow: hidden;
+                  min-height: 16rem;
+                  img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .two {
+          flex: 0.6;
+          &-row {
+            .two-col {
+              .two-card {
+                &-img {
+                  position: relative;
+                  overflow: hidden;
+                  min-height: 17rem;
+                  @media screen and (min-width: 768px) {
+                    min-height: 34rem;
+                  }
+                  img {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .three {
+          flex: 0.2;
+
+          &-row {
+            .three-col {
+              .three-card {
+                &-img {
+                  position: relative;
+                  overflow: hidden;
+                  min-height: 16rem;
+                  img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .second-article {
+    &-main {
+      &-body {
+        .second-article-row {
+          .second-article-col {
+            .second-article-card {
+              &-img {
+                min-height: 16rem;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                img {
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

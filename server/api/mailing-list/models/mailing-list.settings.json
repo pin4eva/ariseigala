@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mailing_lists",
+  "info": {
+    "name": "mailing-list"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    }
+  }
+}

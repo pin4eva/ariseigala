@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/education-cover",
+      "handler": "education-cover.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/education-cover",
+      "handler": "education-cover.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/education-cover",
+      "handler": "education-cover.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

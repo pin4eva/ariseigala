@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: igala_frontend
+    image: pin4eva/igala_frontend
+    env_file:
+      - ./frontend/.env
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
+
+  server:
+    container_name: igala_server
+    image: pin4eva/igala_server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    env_file:
+      - ./server/.env
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    command: yarn start

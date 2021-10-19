@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "magazine_banners",
+  "info": {
+    "name": "magazine-banner",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 225
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 350
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "issue": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

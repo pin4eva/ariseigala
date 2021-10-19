@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/culture-and-tourism",
+      "handler": "culture-and-tourism.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/culture-and-tourism",
+      "handler": "culture-and-tourism.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/culture-and-tourism",
+      "handler": "culture-and-tourism.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
