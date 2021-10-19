@@ -22,7 +22,7 @@ WORKDIR /app
 
 COPY --from=builder /app /app
 
-ENV PORT=8001
+
 ENV STRAPI_LOG_LEVEL=debug
 ENV NODE_ENV=production
 
