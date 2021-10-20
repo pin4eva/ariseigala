@@ -120,7 +120,6 @@ MagazineHome.getInitialProps = async (): Promise<{
 		const { data: magBanner } = await apollo.query({
 			query: MAG_BANNER,
 		});
-		console.log(magBanner);
 
 		const magazines: IMagazine[] = data?.magazines;
 		const banner = magBanner?.magazineBanner?.cover.url;

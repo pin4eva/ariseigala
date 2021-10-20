@@ -12,6 +12,7 @@ const Pdf: NextPage<{ file: string }> = ({
 	file: string;
 }): JSX.Element => {
 	if (!file) return <LoaderComp />;
+
 	return (
 		<PdfViewLayout>
 			<div>
