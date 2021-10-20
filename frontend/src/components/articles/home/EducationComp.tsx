@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { IArticle } from "types/interface";
+import { SERVER_URI } from "utils/constants";
 import TitleComp from "../TitleComp";
 
 const EducationComp = ({ articles }: { articles: IArticle[] }): JSX.Element => {
@@ -12,7 +13,7 @@ const EducationComp = ({ articles }: { articles: IArticle[] }): JSX.Element => {
 			<Link href={`/articles/education/${articles?.[0]?.slug}`}>
 				<a className="text-inherit text-decoration-none">
 					<img
-						src={articles?.[0]?.image.url}
+						src={SERVER_URI + articles?.[0]?.image.url}
 						alt="Education"
 						className="banner-image"
 					/>

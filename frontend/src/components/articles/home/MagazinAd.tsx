@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { IMagazine } from "types/interface";
+import { SERVER_URI } from "utils/constants";
 
 const MagazinAd = ({
 	mag,
@@ -16,7 +17,7 @@ const MagazinAd = ({
 					<div className="flex-wrapper d-md-flex">
 						<div className="left ">
 							<div className="inner">
-								<img src={mag?.cover?.url} alt="" />
+								<img src={SERVER_URI + mag?.cover?.url} alt="" />
 							</div>
 						</div>
 						<div className="right">

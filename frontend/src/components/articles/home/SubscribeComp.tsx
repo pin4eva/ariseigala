@@ -1,7 +1,34 @@
-import React from "react";
+import { useMutation } from "@apollo/client";
+import { CREATE_MAILING_LIST } from "apollo/queries/articleQuery";
+import Cookies from "js-cookie";
+import React, { Fragment, useEffect, useState } from "react";
+import { Loader } from "rsuite";
 import styled from "styled-components";
 
 const SubscribeComp = (): JSX.Element => {
+	const isSubscribed = Cookies.get("subscribed");
+	const [email, setEmail] = useState("");
+	const [createMail, { loading }] = useMutation(CREATE_MAILING_LIST);
+	const [subscribed, setSubscribed] = useState(false);
+
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+		try {
+			await createMail({ variables: { email } });
+			setEmail("");
+			Cookies.set("subscribed", "true");
+			setSubscribed(true);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	useEffect(() => {
+		const data = Boolean(isSubscribed);
+		if (data) {
+			setSubscribed(data);
+		}
+	}, [subscribed, isSubscribed]);
 	return (
 		<Wrapper>
 			<div className="text-white">
@@ -10,31 +37,33 @@ const SubscribeComp = (): JSX.Element => {
 						<p className="text-center mb-5 big-head fw-700 text-uppercase">
 							Subscribe to our newsletter
 						</p>
-						{/* <p className="p-0 my-4 text-center fw-light">
-							Sit vestibulum facilisis at at egestas malesuada dignissim. Eget
-							in semper et ultrices leo scelerisque dui diam. Ut posuere
-							sagittis volutpat pretium egestas aliquet. Nibh condimentum mattis
-							pharetra fringilla et. At varius nibh et congue turpis justo, at
-							sed. Magna euismod ultricies quam integer egestas orci. Luctus
-							eget vivamus libero tellus ipsum nec amet. Dolor vel orci, a
-							fermentum at amet. Sit velit ipsum amet fringilla integer quis est
-							lorem. Lacus nisi, faucibus elit vitae eu netus. Aliquam etiam
-							egestas urna arcu.
-						</p> */}
-						<form className=" d-md-flex  w-75 mx-auto">
+
+						<form className=" d-md-flex  w-75 mx-auto" onSubmit={handleSubmit}>
 							<div className="col-md-7">
 								<input
+									required
 									type="email"
 									className="form-control py-3 bg-dark text-light border"
 									placeholder="example@gmail.com"
+									onChange={(e) => setEmail(e.target.value)}
+									disabled={subscribed}
+									value={email}
 								/>
 							</div>
 							<div className="d-grid">
 								<button
-									type="submit"
+									disabled={loading || subscribed}
 									className="ms-md-3 btn btn-light mb-3 px-5 my-md-0 my-2 "
 								>
-									Subscribe
+									{loading ? (
+										<Loader />
+									) : subscribed ? (
+										<Fragment>
+											Subscribed <i className="fas fa-check text-success"></i>
+										</Fragment>
+									) : (
+										"Subscribed"
+									)}
 								</button>
 							</div>
 						</form>

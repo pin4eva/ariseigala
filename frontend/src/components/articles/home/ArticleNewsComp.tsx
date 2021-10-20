@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { IArticle } from "types/interface";
+import { SERVER_URI } from "utils/constants";
 import { truncateDescription, truncateTitle } from "utils/utils";
 
 interface IProps {
@@ -18,7 +19,7 @@ const ArticleNewsComp: React.FC<IProps> = ({ articles }): JSX.Element => {
 			<div className="line bg-warning mt-3"></div>
 			<div className="d-md-flex home-section-flex-wrapper">
 				<div className="left">
-					<img src={articles?.[0]?.image?.url} />
+					<img src={SERVER_URI + articles?.[0]?.image?.url} />
 					<Link href={`/articles/news/${articles?.[0]?.slug}`} passHref>
 						<p className="big-head mt-2 mb-5 c-pointer">
 							{truncateTitle(articles?.[0]?.title, 10)}

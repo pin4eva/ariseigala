@@ -4,7 +4,7 @@ const prodOrigins = ["http://143.198.164.151", "http://143.198.164.151:8000", "h
 
 const origin = process.env.NODE_ENV === "production" ? prodOrigins : devOrigins;
 
-module.exports =({env})=> ({
+module.exports =()=> ({
   settings: {
     cors: {
       enable: true,

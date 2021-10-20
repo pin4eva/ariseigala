@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - "server/v3/**"
+      - "server/**"
 
 jobs:
   deploy:
