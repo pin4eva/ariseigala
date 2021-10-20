@@ -7,6 +7,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import { IArticle } from "types/interface";
+import { SERVER_URI } from "utils/constants";
 import { truncateTitle } from "utils/utils";
 import TitleComp from "../TitleComp";
 
@@ -23,7 +24,7 @@ const CultureComp: React.FC<IProps> = ({ articles }): JSX.Element => {
 			</p>
 
 			<img
-				src={articles?.[0]?.image.url}
+				src={SERVER_URI + articles?.[0]?.image.url}
 				alt="culture"
 				className="banner-image"
 			/>
@@ -137,7 +138,11 @@ const Wrapper = styled.section`
 const ListPreviewComp = ({ article }: { article: IArticle }): JSX.Element => {
 	return (
 		<div className="inner preview">
-			<img src={article?.image?.url} alt={article?.title} className="w-100" />
+			<img
+				src={SERVER_URI + article?.image?.url}
+				alt={article?.title}
+				className="w-100"
+			/>
 			<div>
 				<p className="inner-excerpt mt-2">{truncateTitle(article?.title)}</p>
 				<div className="line bg-warning w-50 mb-2 mx-auto" />

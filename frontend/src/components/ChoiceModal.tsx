@@ -12,7 +12,7 @@ const ChoiceModalComp = ({
 	onHide(): void;
 }): JSX.Element => {
 	return (
-		<Modal show={show} onHide={onHide} full>
+		<Modal show={show} onHide={onHide} full className="d-none d-md-block">
 			<Modal.Header>
 				<div className="text-center">
 					<img src="/images/logo.png" alt="" />

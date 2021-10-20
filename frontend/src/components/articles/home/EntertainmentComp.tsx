@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { IArticle } from "types/interface";
+import { SERVER_URI } from "utils/constants";
 import TitleComp from "../TitleComp";
 
 interface IProps {
@@ -19,7 +20,7 @@ const EntertainmentComp: React.FC<IProps> = ({ articles }): JSX.Element => {
 					<div className="inner">
 						<Link href={`/articles/entertainment/${articles?.[0]?.slug}`}>
 							<a className="text-inherit text-decoration-none">
-								<img src={articles?.[0]?.image.url} alt="" />
+								<img src={SERVER_URI + articles?.[0]?.image.url} alt="" />
 								<p className="big-head fs-3 mt-3">{articles?.[0]?.title}</p>
 							</a>
 						</Link>
@@ -88,7 +89,7 @@ const SingleCard = ({ article }: { article: IArticle }) => {
 		<Link href={`/articles/entertainment/${article?.slug}`}>
 			<a className="link-dark">
 				<div className="inner-content mb-4">
-					<img src={article?.image?.url} className="" />
+					<img src={SERVER_URI + article?.image?.url} className="" />
 					<div className="">
 						<p className="font-14 fw-400">{article?.title} </p>
 					</div>

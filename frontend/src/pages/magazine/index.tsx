@@ -10,6 +10,7 @@ import React, { Fragment } from "react";
 import Tilt from "react-tilt";
 import styled from "styled-components";
 import { IMagazine } from "types/interface";
+import { SERVER_URI } from "utils/constants";
 
 const MagazineHome: NextPage<{
 	magazines: IMagazine[] | null;
@@ -60,7 +61,7 @@ const MagazineHome: NextPage<{
 								</div>
 								<div className="right">
 									<Tilt {...options}>
-										<img src={banner || ""} alt="" />
+										<img src={SERVER_URI + banner || ""} alt="" />
 									</Tilt>
 								</div>
 							</div>
@@ -148,7 +149,7 @@ const SingleMagazine = ({ magazine }: { magazine: IMagazine }) => {
 			>
 				<div className="card  border-0 h-100">
 					<img
-						src={magazine?.cover?.url}
+						src={SERVER_URI + magazine?.cover?.url}
 						alt={magazine?.title}
 						className="card-img"
 					/>

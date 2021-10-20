@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ADS_1, GET_ADS_2 } from "apollo/queries/articleQuery";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { SERVER_URI } from "utils/constants";
 
 const AdvertisementLandScape = (): JSX.Element => {
 	const [images, setImages] = useState([]);
@@ -35,7 +36,9 @@ const AdvertisementLandScape = (): JSX.Element => {
 	return (
 		<AdvertisementWrapper>
 			<section className="container ">
-				{image && <img src={image} alt="ads" className="ads landscape" />}
+				{image && (
+					<img src={SERVER_URI + image} alt="ads" className="ads landscape" />
+				)}
 			</section>
 		</AdvertisementWrapper>
 	);
@@ -82,7 +85,9 @@ export const AdvertisementPortrait = (): JSX.Element => {
 	});
 	return (
 		<AdvertisementPortraitWrapper className="container">
-			{image && <img src={image} alt="ads" className="ads portraite" />}
+			{image && (
+				<img src={SERVER_URI + image} alt="ads" className="ads portraite" />
+			)}
 		</AdvertisementPortraitWrapper>
 	);
 };

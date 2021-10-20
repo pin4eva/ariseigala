@@ -5,6 +5,7 @@ import PdfViewer from "components/pdfComp/pdfviewer/PdfViewer";
 import PdfViewLayout from "Layout/PdfViewLayout";
 import { NextPage, NextPageContext } from "next";
 import React from "react";
+import { SERVER_URI } from "utils/constants";
 
 const Pdf: NextPage<{ file: string }> = ({
 	file,
@@ -16,7 +17,7 @@ const Pdf: NextPage<{ file: string }> = ({
 	return (
 		<PdfViewLayout>
 			<div>
-				<PdfViewer file={file} />
+				<PdfViewer file={SERVER_URI + file} />
 			</div>
 		</PdfViewLayout>
 	);

@@ -121,3 +121,14 @@ export const GET_ADS_2 = gql`
 		}
 	}
 `;
+
+export const CREATE_MAILING_LIST = gql`
+	mutation ($email: String) {
+		createMailingList(input: { data: { email: $email } }) {
+			mailingList {
+				id
+				email
+			}
+		}
+	}
+`;
