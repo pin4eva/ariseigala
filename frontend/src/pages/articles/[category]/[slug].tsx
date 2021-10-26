@@ -10,6 +10,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import { IArticle } from "types/interface";
+import { SERVER_URI } from "utils/constants";
 import { truncateTitle } from "utils/utils";
 
 const SingleArticlePage: NextPage<{ article: IArticle | null }> = ({
@@ -62,7 +63,7 @@ const SingleArticlePage: NextPage<{ article: IArticle | null }> = ({
 					<div className="single-article-2">
 						<div className="single-article-2-img py-2">
 							<img
-								src={article?.image?.url}
+								src={SERVER_URI + article?.image?.url}
 								alt="Landscape picture"
 								width={`${100}%`}
 								height={500}
